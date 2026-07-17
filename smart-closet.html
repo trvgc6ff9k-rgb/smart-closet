@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#101114" />
+    <title>Smart Closet</title>
+    <style>:root{color-scheme:dark;--bg:#101114;--surface:rgba(40,42,48,.72);--card:#22242a;--text:#f7f7fb;--muted:#a0a1aa;--accent:#d3ff55;--danger:#ff6672;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Inter,sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 8% -5%,#303640 0,transparent 29rem),#101114;color:var(--text)}button,input,select{font:inherit}button{border:0;color:inherit;background:none;cursor:pointer}.app-shell{max-width:960px;margin:auto;padding:calc(22px + env(safe-area-inset-top)) 18px 110px}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}header>div{text-align:left}.eyebrow{color:var(--accent);font-size:10px;font-weight:800;letter-spacing:1.5px;margin:0 0 3px}h1,h2,h3,p{margin-top:0}h1{margin-bottom:0;font-size:32px;letter-spacing:-1px}h2{font-size:19px;letter-spacing:-.3px}h2 small{color:var(--muted);font-size:13px;margin-left:8px;font-weight:600}.round{width:43px;height:43px;border-radius:50%;background:var(--surface);backdrop-filter:blur(16px);font-size:27px}.chips,.clothes-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}.chips{margin:0 -18px 24px;padding:0 18px}.chips::-webkit-scrollbar,.clothes-row::-webkit-scrollbar{display:none}.chip{white-space:nowrap;border:1px solid #363941;border-radius:999px;color:#c5c6cd;padding:9px 14px;font-size:13px}.chip.selected{background:var(--text);color:#16171a;border-color:var(--text);font-weight:700}.content{display:grid;gap:28px}.row-section h2{margin-bottom:12px}.clothes-row{margin:0 -18px;padding:0 18px}.clothing-card{position:relative;flex:0 0 124px;overflow:hidden;cursor:pointer}.clothing-card img{display:block;width:124px;height:158px;object-fit:cover;border-radius:17px;background:#2b2d33}.clothing-card p{font-weight:700;font-size:13px;margin:8px 2px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.clothing-card small{color:var(--muted);font-size:11px;margin:0 2px}.card-overlay{position:absolute;inset:0;padding:8px;display:flex;align-items:flex-start;justify-content:space-between}.favorite{color:#ff8292;text-shadow:0 1px 5px #000}.badge{margin-top:auto;background:rgba(10,10,12,.7);padding:5px 7px;border-radius:8px;font-size:10px;font-weight:700}.in-wash img{filter:grayscale(.7);opacity:.56}.essentials{padding-top:4px}.essentials>h2{margin-bottom:12px}.essential-card{background:var(--surface);border:1px solid #33353d;border-radius:19px;padding:15px;margin:10px 0;display:grid;gap:11px}.essential-card>div{display:flex;gap:11px;align-items:center}.essential-card>div>span{color:var(--accent);font-size:24px}.essential-card h3{font-size:14px;margin:0}.inventory{display:flex;justify-content:space-between;text-align:left;padding:9px 0;border-top:1px solid #363941;color:#ceced4;font-size:13px}.inventory strong{color:var(--text)}.empty,.camera-step{text-align:center;background:linear-gradient(145deg,#22252b,#191a1e);border:1px solid #34363e;border-radius:24px;padding:45px 20px}.empty>div,.photo-placeholder{font-size:42px;color:var(--accent);margin-bottom:15px}.empty p,.camera-step p,.muted{color:var(--muted);font-size:14px;line-height:1.45}.primary{display:inline-flex;justify-content:center;align-items:center;background:var(--accent);color:#171813;border-radius:14px;padding:14px 18px;font-size:14px;font-weight:800;margin-top:12px}.tabbar{position:fixed;z-index:4;bottom:0;left:0;right:0;height:82px;padding:10px max(22px,calc((100vw - 600px)/2));padding-bottom:calc(10px + env(safe-area-inset-bottom));background:rgba(18,19,22,.82);backdrop-filter:blur(22px);border-top:1px solid #303139;display:flex;justify-content:space-between;align-items:center}.tab{width:72px;display:grid;justify-items:center;gap:3px;color:#878892;font-size:20px}.tab span{font-size:10px}.tab.active{color:var(--accent)}.add-button{width:58px;height:58px;border-radius:50%;font-size:38px;line-height:1;background:var(--accent);color:#151611;box-shadow:0 6px 25px #b5db4845;transform:translateY(-20px)}.searchbar{display:flex;background:var(--surface);border-radius:14px;padding:0 10px;margin-bottom:15px}.searchbar input{background:transparent;border:0;outline:0;padding:12px;flex:1;color:var(--text)}.add-flow{max-width:520px;margin:auto}.file-label{position:relative;overflow:hidden}.file-label input{position:absolute;inset:0;opacity:0;cursor:pointer}.camera-step small{display:block;color:var(--muted);margin-top:14px}.preview{width:100%;max-height:260px;object-fit:cover;border-radius:20px;margin-bottom:16px}form{display:grid;gap:13px}form label{display:grid;gap:7px;color:#c8c9d0;font-size:12px;font-weight:700}input,select{width:100%;border:1px solid #393b43;background:#202126;color:var(--text);border-radius:12px;padding:13px;outline:none}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.switch{display:flex;align-items:center!important;justify-content:space-between;grid-template-columns:1fr auto}.switch input{appearance:none;width:42px;height:25px;padding:0;border-radius:99px;background:#42444c;transition:.2s}.switch input:checked{background:var(--accent)}.switch input:checked:after{transform:translateX(18px)}.switch input:after{content:"";display:block;width:19px;height:19px;background:#fff;border-radius:50%;margin:2px;transition:.2s}.outfit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.outfit-card{background:var(--surface);border:1px solid #34363e;border-radius:18px;overflow:hidden;cursor:pointer}.outfit-images{height:152px;display:grid;grid-template-columns:repeat(3,1fr);background:#25272d}.outfit-images img{width:100%;height:152px;object-fit:cover}.outfit-card>div:last-child{padding:12px}.outfit-card h2{font-size:14px;margin-bottom:4px}.outfit-card p{font-size:11px;color:var(--muted);margin:0}.scrim{position:fixed;z-index:10;inset:0;background:#000a;display:flex;align-items:flex-end;padding:12px;backdrop-filter:blur(5px)}.modal{position:relative;width:min(570px,100%);max-height:88vh;overflow:auto;margin:auto;background:#202126;border:1px solid #3a3b42;border-radius:25px;padding:28px 20px calc(20px + env(safe-area-inset-bottom));box-shadow:0 20px 70px #0008}.modal-close{position:absolute;right:14px;top:12px;color:var(--muted);font-size:26px}.detail-photo{width:100%;height:230px;object-fit:cover;border-radius:17px;margin-bottom:18px}.modal-actions{display:grid;gap:6px;margin-top:20px}.modal-actions button{background:#2a2c32;border-radius:12px;padding:13px;text-align:left;font-weight:650}.modal-actions .primary{background:var(--accent);color:#171813;text-align:center;margin:0}.danger{color:var(--danger)!important}.steppers{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.steppers label{display:grid;gap:7px;color:#c7c7ce;font-size:13px}.modal .primary{width:100%}@media(min-width:700px){.app-shell{padding-left:34px;padding-right:34px}.clothes-row{margin:0 -34px;padding:0 34px}.chips{margin-left:-34px;margin-right:-34px;padding-left:34px}.clothing-card{flex-basis:150px}.clothing-card img{width:150px;height:195px}.outfit-grid{grid-template-columns:repeat(3,1fr)}.outfit-images,.outfit-images img{height:195px}.tabbar{left:50%;right:auto;transform:translateX(-50%);bottom:18px;width:430px;border:1px solid #34363e;border-radius:26px;height:66px;padding:5px 35px}.add-button{transform:translateY(-14px)}}
+
+/* Flat grey visual refresh */
+:root{--bg:#34363a;--surface:#424449;--card:#3d3f44;--muted:#c5c6ca;--accent:#ff8a1f}
+body{background:var(--bg)}
+.round{background:#4b4d52;backdrop-filter:none}.empty,.camera-step{background:#3f4146}.tabbar{background:#303236;backdrop-filter:none;border-color:#56585d}.add-button{color:#251405;box-shadow:none}.tab{color:#ededee}.tab.active{color:#fff}.tab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.essential-card,.outfit-card{border-color:#56585d}.essential-heading{justify-content:space-between}.inventory-add{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#251405;font-size:22px;line-height:1}.inventory-empty{margin:0;color:var(--muted);font-size:13px}.scrim{backdrop-filter:none}.modal{background:#424449;box-shadow:none}.modal-actions button{background:#3b3d42}input,select{background:#37393e;border-color:#56585d}.badge{background:#2f3135}
+</style>
+  </head>
+  <body>
+    <main id="app" aria-live="polite"></main>
+    <script>const KEY = 'smart-closet-v2';
+
+const seed = {
+  clothing: [], outfits: [], laundry: [], essentials: {
+    underwear: [{ id: crypto.randomUUID(), brand: 'Nike', quantity: 10 }],
+    socks: [{ id: crypto.randomUUID(), brand: 'Calvin Klein', quantity: 6 }]
+  },
+  settings: { coldWeather: false }, history: []
+};
+
+function load() {
+  try { return { ...seed, ...JSON.parse(localStorage.getItem(KEY)) }; }
+  catch { return structuredClone(seed); }
+}
+function save(state) { localStorage.setItem(KEY, JSON.stringify(state)); }
+function update(state, fn) { fn(state); save(state); return state; }
+function imageFromFile(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = reject;
+    reader.onload = () => {
+      const image = new Image();
+      image.onload = () => {
+        const scale = Math.min(1, 1000 / Math.max(image.width, image.height));
+        const canvas = document.createElement('canvas');
+        canvas.width = image.width * scale; canvas.height = image.height * scale;
+        canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL('image/jpeg', .82));
+      };
+      image.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+const categories = ['T-Shirts','Long Sleeve Shirts','Dress Shirts','Polo Shirts','Tank Tops','Hoodies','Sweaters','Jackets','Jerseys','Jeans','Pants','Joggers','Shorts','Sneakers','Dress Shoes','Boots','Sandals','Hats','Belts','Watches','Sunglasses','Accessories'];
+const sections = [
+  ['Tops',['T-Shirts','Long Sleeve Shirts','Dress Shirts','Polo Shirts','Tank Tops','Jerseys']],
+  ['Bottoms',['Jeans','Pants','Joggers','Shorts']],
+  ['Shoes',['Sneakers','Dress Shoes','Boots','Sandals']],
+  ['Layers',['Hoodies','Sweaters','Jackets']],
+  ['Accessories',['Hats','Belts','Watches','Sunglasses','Accessories']]
+];
+const seasons = ['All season','Spring','Summer','Fall','Winter'];
+
+
+let state = load();
+let view = 'closet', activeFilter = 'All', query = '', pendingImage = null, selected = null;
+const app = document.querySelector('#app');
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+const isWashed = item => state.laundry.some(load => load.itemIds.includes(item.id));
+const item = id => state.clothing.find(x => x.id === id);
+const persist = () => { save(state); render(); };
+const icon = name => ({
+  closet:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5a3 3 0 1 1 5 2.2L12 9l7.1 6.1a1 1 0 0 1-.7 1.8H5.6a1 1 0 0 1-.7-1.8L12 9"/></svg>',
+  outfits:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 4 2 4-2 4 4-3 3v9H7v-9L4 8l4-4Z"/></svg>',
+  plus:'+', search:'⌕', wash:'◌', heart:'♥', more:'•••', back:'‹', close:'×', check:'✓'
+}[name] || name);
+
+function shell(content) {
+  app.innerHTML = `<div class="app-shell">${content}</div>${view !== 'add' ? `<nav class="tabbar"><button class="tab ${view === 'closet' ? 'active':''}" data-nav="closet">${icon('closet')}<span>Closet</span></button><button class="add-button" data-action="open-add">${icon('plus')}</button><button class="tab ${view === 'outfits' ? 'active':''}" data-nav="outfits">${icon('outfits')}<span>Outfits</span></button></nav>` : ''}`;
+  bind();
+}
+
+function render() { view === 'closet' ? renderCloset() : view === 'outfits' ? renderOutfits() : renderAdd(); }
+function renderCloset() {
+  const visible = state.clothing.filter(x => {
+    const text = `${x.name} ${x.brand} ${x.category} ${x.color}`.toLowerCase();
+    const filter = activeFilter === 'All' || (activeFilter === 'Favorites' ? x.favorite : activeFilter === 'Clean' ? !isWashed(x) : activeFilter === 'In Wash' ? isWashed(x) : x.category === activeFilter);
+    return filter && text.includes(query.toLowerCase());
+  });
+  const chips = ['All', ...categories, 'Favorites', 'Clean', 'In Wash'].map(x => `<button class="chip ${x === activeFilter ? 'selected':''}" data-filter="${esc(x)}">${esc(x)}</button>`).join('');
+  let rows = '';
+  if (activeFilter === 'In Wash') rows = row('In Wash', visible.filter(isWashed), true);
+  else {
+    sections.forEach(([name, cats]) => { const matches = visible.filter(x => cats.includes(x.category) && !isWashed(x)); if (matches.length) rows += row(name, matches); });
+    const favs = visible.filter(x => x.favorite && !isWashed(x)); if (favs.length) rows += row('Favorites', favs);
+    const recent = visible.filter(x => !isWashed(x)).slice(-8).reverse(); if (recent.length) rows += row('Recently Added', recent);
+    const washing = activeFilter === 'All' ? state.clothing.filter(isWashed) : []; if (washing.length) rows += row('In Wash', washing, true);
+  }
+  shell(`<header><div><p class="eyebrow">YOUR WARDROBE</p><h1>Closet</h1></div><button class="round" data-action="search">${icon('search')}</button></header>${query !== '' ? `<div class="searchbar"><input autofocus placeholder="Search your closet" value="${esc(query)}" data-search><button data-action="clear-search">${icon('close')}</button></div>` : ''}<div class="chips">${chips}</div><section class="content">${rows || empty('Your closet is ready for its first piece.', 'Add clothing to start building outfits.')} ${essentials()}</section>`);
+}
+function row(title, items, laundry = false) { return `<section class="row-section"><h2>${title}<small>${items.length}</small></h2><div class="clothes-row">${items.map(x => card(x, laundry)).join('')}</div></section>`; }
+function card(x, laundry) { return `<article class="clothing-card ${laundry ? 'in-wash':''}" data-item="${x.id}" tabindex="0"><img loading="lazy" src="${x.image}" alt="${esc(x.name)}" /><div class="card-overlay">${x.favorite ? `<span class="favorite">${icon('heart')}</span>` : ''}${laundry ? `<span class="badge">In wash</span>` : ''}</div><p>${esc(x.name)}</p><small>${esc(x.brand || x.category)}</small></article>`; }
+function essentials() { return `<section class="essentials"><h2>Essentials</h2>${['underwear','socks'].map(kind => { const total = state.essentials[kind].reduce((sum, brand) => sum + brand.quantity, 0); return `<article class="essential-card"><div class="essential-heading"><h3>${kind === 'underwear' ? 'Underwear' : 'Sock'} Inventory (${total})</h3><button class="inventory-add" data-action="add-inventory" data-kind="${kind}" aria-label="Add ${kind} type">+</button></div>${state.essentials[kind].map(b => `<button class="inventory" data-inventory="${kind}" data-brand="${b.id}">${esc(b.brand)} <strong>${b.quantity}</strong></button>`).join('') || `<p class="inventory-empty">No types added yet.</p>`}</article>`; }).join('')}</section>`; }
+function empty(title, detail) { return `<div class="empty"><h2>${title}</h2><p>${detail}</p><button class="primary" data-action="open-add">Add clothing</button></div>`; }
+
+function renderOutfits() {
+  shell(`<header><div><p class="eyebrow">LOOKS YOU LOVE</p><h1>Outfits</h1></div><button class="round" data-action="new-outfit">${icon('plus')}</button></header><section class="content">${state.outfits.length ? `<div class="outfit-grid">${state.outfits.map(outfitCard).join('')}</div>` : empty('Make getting dressed effortless.', 'Create an outfit from your favorite pieces.')}</section>`);
+}
+function outfitCard(o) { const pieces = o.itemIds.map(item).filter(Boolean); return `<article class="outfit-card" data-outfit="${o.id}"><div class="outfit-images">${pieces.map(x => `<img loading="lazy" src="${x.image}" alt=""/>`).join('')}</div><div><h2>${esc(o.name)}</h2><p>${o.favorite ? '♥ Favorite · ' : ''}${pieces.length} pieces</p></div></article>`; }
+
+function renderAdd() {
+  shell(`<header class="modal-header"><button class="round" data-action="cancel-add">${icon('close')}</button><div><p class="eyebrow">NEW PIECE</p><h1>${pendingImage ? 'Details' : 'Add clothing'}</h1></div><span></span></header><section class="content add-flow">${pendingImage ? itemForm() : `<div class="camera-step"><div class="photo-placeholder">⌁</div><h2>Add a photo first</h2><p>Your image stays private on this device. We’ll compress it before saving.</p><label class="primary file-label">Choose from Photos<input type="file" accept="image/*" capture="environment" data-photo /></label><small>A photo is required to continue.</small></div>`}</section>`);
+}
+function itemForm() { return `<form id="item-form"><img class="preview" src="${pendingImage}" alt="Selected clothing"/><label>Name<input required name="name" placeholder="e.g. Navy Oxford" autofocus /></label><label>Category<select required name="category">${categories.map(x=>`<option>${x}</option>`).join('')}</select></label><div class="field-row"><label>Brand<input name="brand" placeholder="Optional" /></label><label>Color<input name="color" placeholder="Optional" /></label></div><div class="field-row"><label>Season<select name="season">${seasons.map(x=>`<option>${x}</option>`).join('')}</select></label><label>Style<input name="style" placeholder="Casual" /></label></div><label class="switch">Favorite <input type="checkbox" name="favorite"/><span></span></label><button class="primary" type="submit">Save to closet</button></form>`; }
+
+function openItem(id) {
+  const x = item(id); if (!x) return;
+  const laundering = isWashed(x);
+  modal(`<img class="detail-photo" src="${x.image}" alt="${esc(x.name)}"/><h2>${esc(x.name)}</h2><p class="muted">${esc([x.brand,x.category,x.color].filter(Boolean).join(' · '))}</p><div class="modal-actions">${laundering ? `<button class="primary" data-action="clean-item" data-id="${x.id}">Mark clean</button>` : `<button data-action="start-with" data-id="${x.id}">Start outfit with this</button><button data-action="put-wash" data-id="${x.id}">Put in wash</button>`}<button data-action="toggle-favorite" data-id="${x.id}">${x.favorite ? 'Remove favorite' : 'Add favorite'}</button><button class="danger" data-action="delete-item" data-id="${x.id}">Delete</button></div>`);
+}
+function modal(content) { document.body.insertAdjacentHTML('beforeend', `<div class="scrim" data-action="close-modal"><section class="modal" onclick="event.stopPropagation()"><button class="modal-close" data-action="close-modal">${icon('close')}</button>${content}</section></div>`); bind(document.body); }
+function closeModal() { document.querySelector('.scrim')?.remove(); }
+function laundryPrompt(ids) { modal(`<h2>Start laundry</h2><p class="muted">How many essentials are in this load? They’ll be restored when it’s clean.</p><div class="steppers"><label>Underwear <input type="number" min="0" value="0" id="underwear-count" /></label><label>Socks <input type="number" min="0" value="0" id="socks-count" /></label></div><button class="primary" data-action="confirm-laundry" data-ids="${ids.join(',')}">Start laundry</button>`); }
+function setClean(id) { const load = state.laundry.find(x => x.itemIds.includes(id)); if (!load) return; state.laundry = state.laundry.filter(x => x !== load); restoreEssentials(load); persist(); closeModal(); }
+function restoreEssentials(load) { ['underwear','socks'].forEach(kind => { const count = load[kind] || 0; if (count && state.essentials[kind][0]) state.essentials[kind][0].quantity += count; }); }
+function createOutfit(prefill = []) {
+  const available = state.clothing.filter(x => !isWashed(x));
+  const choices = (cats, label, required) => `<label>${label}${required ? ' *':''}<select data-piece="${label}" ${required ? 'required':''}><option value="">Select ${label.toLowerCase()}</option>${available.filter(x=>cats.includes(x.category)).map(x=>`<option value="${x.id}" ${prefill.includes(x.id)?'selected':''}>${esc(x.name)}</option>`).join('')}</select></label>`;
+  modal(`<h2>Build an outfit</h2><form id="outfit-form"><label>Name<input name="name" required placeholder="Weekend casual" /></label>${choices(['Sneakers','Dress Shoes','Boots','Sandals'],'Shoes',true)}${choices(['Jeans','Pants','Joggers','Shorts'],'Bottom',true)}${state.settings.coldWeather ? choices(['Hoodies','Sweaters','Jackets'],'Outer layer',false) : ''}${choices(['T-Shirts','Long Sleeve Shirts','Dress Shirts','Polo Shirts','Tank Tops','Jerseys'],'Top',true)}<label class="switch">Favorite <input type="checkbox" name="favorite"/><span></span></label><button class="primary">Save outfit</button></form>`);
+}
+
+function bind(root = app) {
+  root.querySelectorAll('[data-nav]').forEach(b => b.onclick = () => { view = b.dataset.nav; render(); });
+  root.querySelectorAll('[data-filter]').forEach(b => b.onclick = () => { activeFilter = b.dataset.filter; render(); });
+  root.querySelectorAll('[data-item]').forEach(el => { let timer; el.onpointerdown=()=> timer=setTimeout(()=>openItem(el.dataset.item),500); el.onpointerup=()=>clearTimeout(timer); el.onclick=()=>openItem(el.dataset.item); });
+  root.querySelectorAll('[data-outfit]').forEach(el => el.onclick = () => outfitMenu(el.dataset.outfit));
+  root.querySelectorAll('[data-inventory]').forEach(el => el.ondblclick = () => inventoryMenu(el.dataset.inventory, el.dataset.brand));
+  root.querySelector('[data-search]')?.addEventListener('input', e => { query = e.target.value; renderCloset(); });
+  root.querySelector('[data-photo]')?.addEventListener('change', async e => { if (e.target.files[0]) { pendingImage = await imageFromFile(e.target.files[0]); render(); } });
+  root.querySelector('#item-form')?.addEventListener('submit', e => { e.preventDefault(); const f = new FormData(e.target); state.clothing.push({ id:crypto.randomUUID(), image:pendingImage, name:f.get('name'), category:f.get('category'), brand:f.get('brand'), color:f.get('color'), season:f.get('season'), style:f.get('style'), favorite:f.has('favorite'), createdAt:Date.now() }); pendingImage=null; view='closet'; persist(); });
+  root.querySelector('#outfit-form')?.addEventListener('submit', e => { e.preventDefault(); const f = new FormData(e.target); const ids = [...e.target.querySelectorAll('[data-piece]')].map(x=>x.value).filter(Boolean); state.outfits.push({id:crypto.randomUUID(),name:f.get('name'),itemIds:ids,favorite:f.has('favorite')}); persist(); closeModal(); });
+  root.querySelectorAll('[data-action]').forEach(b => b.onclick = e => action(b.dataset.action, b.dataset));
+}
+function action(name, data) {
+  if (name === 'open-add') { view='add'; pendingImage=null; render(); }
+  if (name === 'cancel-add') { view='closet'; pendingImage=null; render(); }
+  if (name === 'search') { query=' '; renderCloset(); }
+  if (name === 'clear-search') { query=''; renderCloset(); }
+  if (name === 'close-modal') closeModal();
+  if (name === 'put-wash') { closeModal(); laundryPrompt([data.id]); }
+  if (name === 'confirm-laundry') { const underwear=+document.querySelector('#underwear-count').value||0, socks=+document.querySelector('#socks-count').value||0; const ids=data.ids.split(',').filter(id=>!isWashed(item(id))); if (ids.length) state.laundry.push({id:crypto.randomUUID(),itemIds:ids,underwear,socks,createdAt:Date.now()}); ['underwear','socks'].forEach(k=>{if(state.essentials[k][0]) state.essentials[k][0].quantity=Math.max(0,state.essentials[k][0].quantity-(k==='underwear'?underwear:socks));}); persist(); closeModal(); }
+  if (name === 'clean-item') setClean(data.id);
+  if (name === 'toggle-favorite') { item(data.id).favorite=!item(data.id).favorite; persist(); closeModal(); }
+  if (name === 'delete-item' && confirm('Delete this clothing item permanently?')) { state.clothing=state.clothing.filter(x=>x.id!==data.id); state.outfits.forEach(o=>o.itemIds=o.itemIds.filter(id=>id!==data.id)); persist(); closeModal(); }
+  if (name === 'start-with') { closeModal(); createOutfit([data.id]); }
+  if (name === 'new-outfit') createOutfit();
+}
+function inventoryMenu(kind, id) { const brand=state.essentials[kind].find(x=>x.id===id); const isNew=!brand; modal(`<h2>${isNew?'Add brand':esc(brand.brand)}</h2><form id="inventory-form"><label>Brand<input name="brand" value="${esc(brand?.brand||'')}" required/></label><label>Quantity<input name="quantity" type="number" min="0" value="${brand?.quantity||0}" required/></label><button class="primary">Save</button>${brand?`<button type="button" class="danger" data-action="delete-brand" data-kind="${kind}" data-id="${id}">Delete brand</button>`:''}</form>`); document.querySelector('#inventory-form').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),q=+f.get('quantity');if(brand){if(q===0&&!confirm('Remove this brand from inventory?'))return;Object.assign(brand,{brand:f.get('brand'),quantity:q});if(q===0)state.essentials[kind]=state.essentials[kind].filter(x=>x!==brand);}else state.essentials[kind].push({id:crypto.randomUUID(),brand:f.get('brand'),quantity:q});persist();closeModal();}; }
+function outfitMenu(id) { const o=state.outfits.find(x=>x.id===id); modal(`<h2>${esc(o.name)}</h2><p class="muted">${o.itemIds.length} pieces</p><div class="modal-actions"><button class="primary" data-action="worn-today" data-id="${id}">Worn today</button><button data-action="duplicate-outfit" data-id="${id}">Duplicate</button><button data-action="favorite-outfit" data-id="${id}">${o.favorite?'Remove favorite':'Favorite'}</button><button class="danger" data-action="delete-outfit" data-id="${id}">Delete</button></div>`); }
+const originalAction=action; action=function(name,data){ if(name==='add-inventory'){inventoryMenu(data.kind,'new');return;}if(name==='worn-today'){const o=state.outfits.find(x=>x.id===data.id);closeModal();laundryPrompt(o.itemIds);return;}if(name==='duplicate-outfit'){const o=state.outfits.find(x=>x.id===data.id);state.outfits.push({...structuredClone(o),id:crypto.randomUUID(),name:`${o.name} copy`});persist();closeModal();return;}if(name==='favorite-outfit'){const o=state.outfits.find(x=>x.id===data.id);o.favorite=!o.favorite;persist();closeModal();return;}if(name==='delete-outfit'&&confirm('Delete this outfit?')){state.outfits=state.outfits.filter(x=>x.id!==data.id);persist();closeModal();return;}if(name==='delete-brand'){state.essentials[data.kind]=state.essentials[data.kind].filter(x=>x.id!==data.id);persist();closeModal();return;} originalAction(name,data);};
+render();
+</script>
+  </body>
+</html>
